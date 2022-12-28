@@ -28,7 +28,7 @@ export default function Photos() {
   useEffect(() => {
     let currentAlbum = allAlbums.find((album:AlbumState) => album.id === parseInt(albumId || ''))
     dispatch(getPhotosAsync({id: albumId || '', currentAlbum})) // GET Photos API call
-  },[])
+  },[dispatch, albumId, allAlbums])
   return (
       status === 'loading' || status === 'failed' ? 
       <div className='mt-16 text-lg font-bold'>{status === 'loading' && 'Loading...'}{status === 'failed' && 'Error from server...'}</div>

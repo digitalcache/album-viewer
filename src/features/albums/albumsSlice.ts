@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { RootState, store } from '../../app/store';
+import { RootState } from '../../app/store';
 import { getAlbums } from './albumsAPI';
 
 export interface CurrentUserState {

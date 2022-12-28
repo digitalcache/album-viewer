@@ -26,7 +26,7 @@ export default function Albums() {
   useEffect(() => {
     let currentUser = allUsers.find((user:any) => user.id === parseInt(userId || ''))
     dispatch(getAlbumsAsync({id: userId || '', currentUser})) // GET Albums API call
-  },[])
+  },[dispatch, userId, allUsers])
   return (
       status === 'loading' || status === 'failed' ? 
       <div className='mt-16 text-lg font-bold'>{status === 'loading' && 'Loading...'}{status === 'failed' && 'Error from server...'}</div>
