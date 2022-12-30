@@ -36,6 +36,8 @@ export default function Photos() {
       <div className='p-4'>
         <Nav currentAlbum={album.title} currentUser={user.name} currentUserId={user.id}/>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
+          <span>Photos</span>
+          
           {allPhotos.length > 0 && allPhotos.map((photo: PhotoState) => 
             <PhotoInfo 
               key={photo.id} 

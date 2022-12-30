@@ -5,7 +5,7 @@ import placeholder from "./placeholder.png";
 export default function PhotoInfo(props: PhotoState) {
   return (
     <a target="_blank" rel="noreferrer" href={props.url}> {/* Opens the photo in a new tab */}
-        <div className="max-w-sm rounded overflow-hidden shadow-lg h-full">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg h-full" data-testid={`photo-${props.id}`}>
             <LazyLoadImage src={props.thumbnailUrl}
                 width={'100%'} height="384px" 
                 placeholderSrc={placeholder}
